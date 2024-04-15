@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="neomorphism.css">
+    <!-- <script type="module" src="player.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f93b154a82.js" crossorigin="anonymous"></script>
+</head>
+<body class="BODY flex flex-col items-center justify-center m-2 p-8 bg-gray-100 ">
+    <div class="main bg-gray-300 w-3/12 h-3/12 flex flex-col justify-center items-center dark:bg-slate-700 neo neo-border rounded-3xl">
+        <div class="heading flex  justify-between items-center w-7/12 m-5">
+            <p class="select-none font-quicksand font-semibold flex text-center left-56 right-56 dark:text-white">Music</p>
+            <button class="darkMode ButtonsInPage rounded-full" ><i class="fa-solid fa-moon"></i></button>
+            <button class="lightMode ButtonsInPage rounded-full "><i class="fa-solid fa-sun"></i></button>
+        </div>
+        <div class="image-area w-52 h-52 rounded-lg shadow-custom">
+            <img class="first-image object-cover w-52 h-52 rounded-full accent-red-300" src="/images/music-1.jpg" width="20" height="20" alt="">
+        </div>
+        <div class="song-details flex-col place-content-center items-center text-center m-8">
+            <p class="song-name gap-6 textClass select-none font-quicksand font-semibold hover:text-lg ease-in dark:text-white">Bhool Bhulaiyaa</p>
+            <p class="Artist textClass select-none font-quicksand font-semibold hover:text-lg ease-in dark:text-white">Neeraj Shridhar</p>
+
+        </div>
+        <div class="progressArea relative w-3/5 h-1 bg-slate-300 shadow-custom rounded-md">
+            <div class="progressBar absolute top-0 left-0 w-0 h-full bg-black">
+
+                <audio id="main-audio" src="/songs/music-1.mp3"></audio>
+            </div>
+            <div class="pinkSlider absolute top-0 left-0 h-full bg-gradient-to-r from-pink-500 to-violet-500 rounded-md"></div>
+            <div class="song-timer absolute bottom-0 left-0 h-0 w-full flex justify-between text-xs text-gray-600 px-1">
+                <span class="current-timer place-content-start items-start dark:text-white select-none">0:00</span>
+                <span class="EndTime dark:text-white select-none">5:27</span>
+            </div>
+        </div>
+        <div class="controls m-7 flex justify-between gap-11">
+            <!-- <button class="Repete"><i class="fa-solid fa-repeat"></i></button> -->
+            <button class="Previous ButtonsInPage rounded-full"><i class="fa-solid fa-backward"></i></button>
+            <div class="play-pause ButtonsInPage rounded-full ">
+                <button class="playBtn rounded-full"><i class="fa-solid fa-play"></i></button>
+                <button class="pauseBtn hidden rounded-full"><i class="fa-solid fa-pause"></i></button>
+            </div>
+            <button class="Next ButtonsInPage rounded-full"><i class="fa-solid fa-forward"></i></button>
+        </div>
+        <div class="music-list">
+            <div class="header">
+              <div class="row">
+                <button id="moreMusic"><i class="fa-solid fa-bars"></i></button>
+                <!-- <span>Music list</span> -->
+              </div>
+              <button id="close" class="hidden" ><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <ul>
+              <!--  li list are coming from js -->
+            </ul>
+          </div>
+        </div>
+        <div id="footer" class="footer m-3">
+            <div style="display: inline-block;">Made By Abhishek kumar ♥ | </div>
+            <a href="https://github.com/Abhishek-kumar00/Music-player.git">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        
+       
+    </div>
+    <style>
+        .neo{
+            border: rgb(30 41 59/var(--tw-bg-opacity)) 1px solid;
+            box-shadow: 0 -2px 5px rgba(255,255,255, 0.05), inset 0 -4px 4px rgba(255,255,255,0.05),1px 4px 4px rgba(255,255,255,0.3),inset 0 4px 4px rgba(0,0,0,0.6);
+            backdrop-filter: blur(2px);
+        }
+        .neo-border {
+            box-shadow: 5px 5px 10px #1e1e1e, -5px -5px 10px #2e2e2e;
+        }
+        .ButtonsInPage {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            
+        }
+
+        .ButtonsInPage:hover {
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+        }
+    </style>
+    <script src="index.js"></script>
+
+    
+</body>
+</html>

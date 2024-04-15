@@ -1,0 +1,11 @@
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 300 to 700 */
+
+@media screen and (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+    .main {
+      width: 90%;
+      height: auto;
+    }
+}
+  
